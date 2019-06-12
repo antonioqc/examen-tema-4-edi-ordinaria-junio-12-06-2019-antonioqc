@@ -1,61 +1,51 @@
+/**
+ * Documentacion estudiante
+ * @author QuesadaCuadradoAntonio
+ * @version 1.0
+ */
+
+
 enum Curso {
-	PRIMARIA, ESO, BACHILLERATO, UNIVERSIDAD
+  PRIMARIA, ESO, BACHILLERATO, UNIVERSIDAD
 };
 
-public class Estudiante{
-	Curso curso;
-	private String nombre;
-	private String apellidos;
-	private String nif;
 
-	
-	protected Estudiante(String nombre, String apellidos, String nif,
-			Curso curso) {
-		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.nif = nif;
-		this.curso = curso;
-	}
+public class Estudiante extends Persona{
+  Curso curso;
+  
+  /**
+   * Constructor
+   * 
+   * @param nombre Nombre del estudiante
+   * @param apellidos Apellidos del estudiante
+   * @param nif NIF del estudiante
+   * @param curso Curso del estudiante
+   */
+  protected Estudiante(String nombre, String apellidos, String nif,
+      Curso curso) {
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.nif = nif;
+    this.curso = curso;
+  }
 
-	
-	protected String getNombre() {
-		return nombre;
-	}
+  /**
+   * Devolver el curso del estudiante
+   * 
+   * @return Curso del estudiante
+   */
+  protected Curso getCurso() {
+    return curso;
+  }
 
-	
-	protected void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+  /**
+   * Establecer el curso del estudiante
+   * 
+   * @param curso Curso del estudiante
+   */
+  protected void setCurso(Curso curso) {
+    this.curso = curso;
+  }
 
-	
-	protected String getApellidos() {
-		return apellidos;
-	}
-
-	
-	protected void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
-	}
-
-	
-	protected String getNif() {
-		return nif;
-	}
-
-	
-	protected void setNif(String nif) {
-		this.nif = nif;
-	}
-		
-	
-	protected Curso getCurso() {
-		return curso;
-	}
-
-	
-	protected void setCurso(Curso curso) {
-		this.curso = curso;
-	}
-
-	
+  
 }
